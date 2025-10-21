@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Menu</h1>
+        </header>
+
+        <main class="menu-container">
+            <!-- Drinks Section -->
+            <section class="menu-section">
+                <h2>Drinks</h2>
+                <div class="menu-item" data-name="Latte" data-price="4.50">
+                    <h3>Latte</h3>
+                    <p>Smooth espresso with steamed milk</p>
+                    <span class="price">$4.50</span>
+                    <button class="add-to-order">Add to Order</button>
+                </div>
+            </section>
+
+            <!-- Pastries Section -->
+            <section class="menu-section">
+                <h2>Pastries</h2>
+                <div class="menu-item" data-name="Blueberry Muffin" data-price="3.50">
+                    <h3>Blueberry Muffin</h3>
+                    <p>Fresh baked with real blueberries</p>
+                    <span class="price">$3.50</span>
+                    <button class="add-to-order">Add to Order</button>
+                </div>
+                
+                <div class="menu-item" data-name="Croissant" data-price="3.00">
+                    <h3>Croissant</h3>
+                    <p>Buttery, flaky pastry</p>
+                    <span class="price">$3.00</span>
+                    <button class="add-to-order">Add to Order</button>
+                </div>
+            </section>
+
+            <!-- Salads Section -->
+            <section class="menu-section">
+                <h2>Salads</h2>
+                <div class="menu-item" data-name="Caesar Salad" data-price="8.50">
+                    <h3>Caesar Salad</h3>
+                    <p>Crisp romaine with parmesan</p>
+                    <span class="price">$8.50</span>
+                    <button class="add-to-order">Add to Order</button>
+                </div>
+            </section>
+
+            <!-- Sandwiches Section -->
+            <section class="menu-section">
+                <h2>Sandwiches</h2>
+                <div class="menu-item" data-name="Grilled Sandwich" data-price="7.00">
+                    <h3>Grilled Sandwich</h3>
+                    <p>Toasted with premium ingredients</p>
+                    <span class="price">$7.00</span>
+                    <button class="add-to-order">Add to Order</button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Order Summary Section -->
+        <aside class="order-summary">
+            <h2>Your Order</h2>
+            
+            <div id="order-items">
+                <!-- Order items will appear here -->
+                <p class="empty-order">No items added yet</p>
+            </div>
+
+            <div class="order-totals">
+                <div class="subtotal">
+                    <strong>Subtotal: $<span id="subtotal-amount">0.00</span></strong>
+                </div>
+
+                <div class="tip-section">
+                    <h4>Add a Tip</h4>
+                    <div class="tip-options">
+                        <button class="tip-option" data-percent="15">15%</button>
+                        <button class="tip-option" data-percent="20">20%</button>
+                        <button class="tip-option" data-percent="25">25%</button>
+                    </div>
+                    <div class="custom-tip">
+                        <input type="number" id="custom-tip-input" placeholder="Custom amount" min="0" step="0.01">
+                    </div>
+                    <div class="tip-display">
+                        Tip: $<span id="tip-amount">0.00</span>
+                    </div>
+                </div>
+
+                <div class="total">
+                    <strong>Total: $<span id="total-amount">0.00</span></strong>
+                </div>
+
+                <button id="place-order-button" class="place-order-btn">Place Order</button>
+            </div>
+
+            <!-- Order Failed Message -->
+            <div id="order-failed-message" class="order-message hidden">
+                <h3>Order Failed</h3>
+                <p>Sorry, we couldn't process your order. Failed to process order. Please try again.</p>
+                <button id="close-error-btn">Close & Continue</button>
+            </div>
+
+            <!-- Order Success Message -->
+            <div id="order-success-message" class="order-message hidden">
+                <h3>Order Placed Successfully!</h3>
+                <p>Thank you for your order. It will be ready shortly.</p>
+                <button id="close-success-btn">OK</button>
+            </div>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
